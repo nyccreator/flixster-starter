@@ -1,35 +1,41 @@
 import { useState, useEffect } from "react";
 import MovieCard from "../MovieCard/MovieCard";
+import LoadMoreButton from "../LoadMoreButton/LoadMoreButton";
+import "./MovieList.css";
 
-const MovieList = () => {
+const MovieList = ({ url, page, setPage }) => {
+	const apiKey = import.meta.env.VITE_API_KEY;
 	const [movies, setMovies] = useState([]);
 
 	useEffect(() => {
-		const apiKey = import.meta.env.VITE_API_KEY;
 		async function fetchMovies() {
-			const response = await fetch(
-				`https://api.themoviedb.org/3/trending/movie/day?language=en-US&api_key=${apiKey}`
-			);
-			console.log(response);
+			const response = await fetch(`${url}&page=${page}&api_key=${apiKey}`);
 			const data = await response.json();
-			console.log(data.results);
-			setMovies(data.results);
+
+			if (page === 1) {
+				setMovies(data.results);
+			} else {
+				setMovies([...movies, ...data.results]);
+			}
 		}
 
 		fetchMovies();
-	}, []);
+	}, [url, page]);
 
 	return (
-		<>
-			{movies.map((movie, index) => (
-				<MovieCard
-					title={movie.original_title}
-					poster={movie.poster_path}
-					rating={movie.vote_average}
-					key={index}
-				/>
-			))}
-		</>
+		<div id="movie-container">
+			<div id="movie-list">
+				{movies.map((movie, index) => (
+					<MovieCard
+						title={movie.original_title}
+						poster={movie.poster_path}
+						rating={movie.vote_average}
+						key={index}
+					/>
+				))}
+			</div>
+			<LoadMoreButton page={page} setPage={setPage} />
+		</div>
 	);
 };
 

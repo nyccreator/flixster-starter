@@ -1,10 +1,15 @@
+import "./MovieCard.css";
+
 const MovieCard = ({ title, poster, rating }) => {
 	return (
-		<>
-			<h2>{title}</h2>
-			<img src={`https://image.tmdb.org/t/p/w500${poster}`} />
-			<h3>{rating}</h3>
-		</>
+		<div className="movie-card">
+			<img
+				className="poster"
+				src={`https://image.tmdb.org/t/p/w500${poster}`}
+			/>
+			<p className="title">{title}</p>
+			<p className="rating">{rating.toFixed(2)}</p>
+		</div>
 	);
 };
 
