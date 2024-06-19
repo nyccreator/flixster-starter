@@ -27,7 +27,7 @@ function SideBarCard({
 		poster === null ? defaultMovie : `https://image.tmdb.org/t/p/w500${poster}`;
 	return (
 		<div className="side-bar-card">
-			<img className="side-bar-poster" src={posterPath} />
+			<img className="side-bar-poster" src={posterPath} alt={title} />
 			<div className="side-bar-card-info">
 				<p className="side-bar-card-title">{title}</p>
 			</div>

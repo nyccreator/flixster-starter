@@ -11,6 +11,7 @@
 	width: 90%;
 	border-top: 1px solid black;
 	padding: 1rem 0;
+	justify-content: space-between;
 }
 
 @media (prefers-color-scheme: dark) {

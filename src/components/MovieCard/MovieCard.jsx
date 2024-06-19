@@ -27,7 +27,7 @@ const MovieCard = ({
 
 	return (
 		<div className="movie-card">
-			<img className="poster" src={path} onClick={onClick} />
+			<img className="poster" src={path} alt={title} onClick={onClick} />
 			<p className="title" onClick={onClick}>
 				{title}
 			</p>
