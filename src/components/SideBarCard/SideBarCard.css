@@ -1,0 +1,31 @@
+.side-bar-card {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+	align-items: flex-start;
+	justify-content: space-between;
+	height: 10%;
+	overflow: hidden;
+	width: 100%;
+}
+
+.side-bar-card-info {
+	display: flex;
+	flex-direction: column;
+	font-size: small;
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.side-bar-card-title {
+	margin: 0;
+}
+
+.side-bar-poster {
+	height: 80%;
+	border-radius: 8px;
+}
+
+.side-bar-bookmark {
+	width: 10%;
+}

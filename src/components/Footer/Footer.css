@@ -1,0 +1,21 @@
+#footer-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 8rem;
+}
+
+#footer {
+	display: flex;
+	flex-direction: row;
+	width: 90%;
+	border-top: 1px solid black;
+	padding: 1rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	#footer {
+		color: #fffffe;
+		border-top: 1px solid #fffffe;
+	}
+}

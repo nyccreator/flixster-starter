@@ -1,0 +1,44 @@
+#side-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/* outline: 1px dotted red; */
+	background-color: #f6f8fa;
+	border-radius: 8px;
+}
+
+#icon-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #ff8906;
+	overflow: hidden;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+#lists {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 0.5rem 0.5rem 0.5rem 1rem;
+	gap: 1rem;
+}
+
+#side-bar-icon {
+	fill: #0f0e17;
+}
+
+@media (prefers-color-scheme: dark) {
+	#side-bar {
+		background-color: #3a3e40;
+	}
+
+	#side-bar-icon {
+		fill: #fffffe;
+	}
+
+	#lists {
+		color: white;
+	}
+}

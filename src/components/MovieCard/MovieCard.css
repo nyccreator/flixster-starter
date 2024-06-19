@@ -11,8 +11,9 @@
 }
 
 .poster {
-	height: 85%;
+	height: 80%;
 	border-radius: 8px;
+	cursor: pointer;
 }
 
 .title {
@@ -21,12 +22,40 @@
 	font-weight: bold;
 	text-wrap: pretty;
 	color: #0f0e17;
+	cursor: pointer;
 }
 
 .rating {
 	margin: 0;
 	font-size: small;
 	color: #e53170;
+}
+
+.move-card-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	width: 100%;
+	height: 100%;
+	gap: 0.5rem;
+}
+
+.eye {
+	width: 1.5rem;
+	cursor: pointer;
+}
+
+.bookmark {
+	height: 1.5rem;
+	cursor: pointer;
 }
 
 @media (prefers-color-scheme: dark) {

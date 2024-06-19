@@ -1,0 +1,7 @@
+#content {
+	padding: 0 6rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 45rem;
+}

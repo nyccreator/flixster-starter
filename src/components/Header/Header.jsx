@@ -4,17 +4,21 @@ import "./Header.css";
 const Header = ({ setUrl, setPage, prev, setPrev }) => {
 	const handleDiscoverClick = () => {
 		setUrl(
-			"https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&sort_by=popularity.desc"
+			"https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US"
 		);
 		setPrev(
-			"https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&sort_by=popularity.desc"
+			"https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US"
 		);
 		setPage(1);
 	};
 
 	const handleTrendingClick = () => {
-		setUrl("https://api.themoviedb.org/3/trending/movie/day?language=en-US");
-		setPrev("https://api.themoviedb.org/3/trending/movie/day?language=en-US");
+		setUrl(
+			"https://api.themoviedb.org/3/trending/movie/day?include_adult=false&include_video=false&language=en-US"
+		);
+		setPrev(
+			"https://api.themoviedb.org/3/trending/movie/day?include_adult=false&include_video=false&language=en-US"
+		);
 		setPage(1);
 	};
 
@@ -32,7 +36,9 @@ const Header = ({ setUrl, setPage, prev, setPrev }) => {
 					Recommended
 				</p>
 			</nav>
+			{/* <div id="search-container-component"> */}
 			<SearchContainer setUrl={setUrl} prev={prev} setPage={setPage} />
+			{/* </div> */}
 		</div>
 	);
 };

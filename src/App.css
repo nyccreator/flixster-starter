@@ -1,6 +1,10 @@
 .App {
 	text-align: center;
 	background-color: #fffffe;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100dvh;
 }
 
 @media (prefers-color-scheme: dark) {

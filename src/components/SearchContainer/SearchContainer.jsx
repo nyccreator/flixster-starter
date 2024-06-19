@@ -13,7 +13,7 @@ const SearchContainer = ({ setUrl, prev, setPage }) => {
 			setUrl(prev);
 		} else {
 			setUrl(
-				`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=false&language=en-US&sort_by=popularity.desc`
+				`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=false&include_video=false&language=en-US`
 			);
 		}
 		setPage(1);
